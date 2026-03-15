@@ -63,34 +63,4 @@ jobs:
         with:
           app-name: 'helloPythonApp'
           slot-name: 'Production'
-
-
-
-name: Deploy to Azure
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: helloPythonApp
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_HELLOPYTHONAPP }}
-        package: .
-
-
-
-
-
-          
-#           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C65F324CF1774B8FAC0E2ECABE6E1DF5 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2C6B277115CA4BE7A3A1B8571B7E5989 }}
